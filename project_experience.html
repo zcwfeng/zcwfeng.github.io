@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>React 编译命令</title>
+    <title>Project 上线技巧</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="zcwfeng">
@@ -64,12 +64,12 @@
           <div class="nav-collapse">
             <ul class="nav">
                           <li class="divider-vertical"></li>
-                  <li >
+                  <li class="active">
                     <a href="/category/project.html">
 						<i class="icon-folder-open icon-large"></i>Project
 					</a>
                   </li>
-                  <li class="active">
+                  <li >
                     <a href="/category/react.html">
 						<i class="icon-folder-open icon-large"></i>React
 					</a>
@@ -95,8 +95,8 @@
                         <h1>
                                 <a href=""
                                         rel="bookmark"
-                                        title="Permalink to React 编译命令">
-                                        React 编译命令
+                                        title="Permalink to Project 上线技巧">
+                                        Project 上线技巧
                                 </a>
                         </h1>
                 </header>
@@ -104,58 +104,112 @@
                 <div class="well">
 <footer class="post-info">
 <span class="label">Date</span>
-<abbr class="published" title="2016-08-11T14:02:00+02:00">
+<abbr class="published" title="2016-08-11T15:02:00+02:00">
         <i class="icon-calendar"></i>四 11 八月 2016
 </abbr>
 <span class="label">By</span>
 <a href="/author/zcwfeng.html"><i class="icon-user"></i>zcwfeng</a>
 <span class="label">Category</span>
-<a href="/category/react.html"><i class="icon-folder-open"></i>React</a>.
+<a href="/category/project.html"><i class="icon-folder-open"></i>Project</a>.
 
 
 <span class="label">Tags</span>
-	<a href="/tag/pelican.html"><i class="icon-tag"></i>pelican</a>
-	<a href="/tag/publishing.html"><i class="icon-tag"></i>publishing</a>
+	<a href="/tag/blog.html"><i class="icon-tag"></i>blog</a>
 </footer><!-- /.post-info -->                </div>
-                <h1>编译命令</h1>
+                <h1>Project 上线技巧</h1>
+<blockquote>
+<h4>签名获取</h4>
+</blockquote>
+<div class="highlight"><pre><span></span>keytool -exportcert -alias androiddebugkey -keystore /Users/zcw/.android/debug.keystore -list -v
+</pre></div>
+
+
+<blockquote>
+<h4>跳转应用商店</h4>
+</blockquote>
 <ul>
-<li>
-<p>运行  server</p>
-<blockquote>
-<p>react-native start 或者 npm start</p>
-</blockquote>
-</li>
-<li>
-<p>运行 客户端</p>
-<blockquote>
-<p>react-native run-android </p>
-</blockquote>
-</li>
-<li>
-<p>安装模块,添加依赖</p>
-<blockquote>
-<p>npm i react-native-swiper --save</p>
-</blockquote>
-</li>
-<li>
-<p>查看模块</p>
-<blockquote>
-<p>npm view react-native-swiper</p>
-</blockquote>
-</li>
-<li>
-<p>删除模块</p>
-<blockquote>
-<p>npm rm react-native-swiper</p>
-</blockquote>
-</li>
+<li>通过Java包名直接定位到你的App</li>
 </ul>
+<div class="highlight"><pre><span></span>    http://market.android.com/details?id=&lt;java包名&gt;
+    或者
+    market://details?id=&lt;java包名&gt;
+</pre></div>
+
+
+<p>范例：market://details?id=com.skyd.luckywheel</p>
+<p>这将直接在菜市场中显示你的App详细介绍页。</p>
+<ul>
+<li>通过Java包名搜索App</li>
+</ul>
+<div class="highlight"><pre><span></span>    http://market.android.com/search?q=pname:&lt;java包名&gt;
+    或者
+    market://search?q=pname:&lt;java包名&gt;
+</pre></div>
+
+
+<p>范例：market://search?q=pname:com.skyd.luckywheel</p>
+<p>这将显示搜索到的App列表。</p>
+<ul>
+<li>通过开发者名称搜索App</li>
+</ul>
+<div class="highlight"><pre><span></span>    http://market.android.com/search?q=pub:&lt;开发者名称&gt;
+    或者
+    market://search?q=pub:&lt;开发者名称&gt;
+</pre></div>
+
+
+<p>范例：market://search?q=pub:SkyD</p>
+<p>这将显示开发者发布的所有App列表。</p>
+<ul>
+<li>通过关键词搜索App</li>
+</ul>
+<div class="highlight"><pre><span></span>    http://market.android.com/search?q=&lt;关键词&gt;
+    或者
+    market://search?q=&lt;关键词&gt;
+</pre></div>
+
+
+<p>范例：market://search?q=luckywheel</p>
+<p>这将显示搜索到的标题（及内容？）中包含此关键词的所有App列表，需注意的是：这个是语言相关的，如果App中有对应于你机器的语言，那么你就要以这个语言搜才容易找到，搜索其他语言版本的名称应该是找不到该软件的，所以这种方法不推荐使用。</p>
+<ul>
+<li>组合查询</li>
+</ul>
+<p>上述搜索相关的内容可以简单组合起来做更精确的筛选，不过通常情况下很少会用到。</p>
+<p>范例：market://search?q=lucky wheel pub:Zcw</p>
+<h4>AndFix</h4>
+<ul>
+<li>AndFix github 地址</li>
+</ul>
+<div class="highlight"><pre><span></span>https://github.com/alibaba/AndFix
+</pre></div>
+
+
+<ul>
+<li>AndFix 第三方工具地址 apkpatch</li>
+</ul>
+<div class="highlight"><pre><span></span>https://github.com/alibaba/AndFix/raw/master/tools/apkpatch-1.0.3.zip
+</pre></div>
+
+
+<ul>
+<li>AndFix 命令</li>
+</ul>
+<div class="highlight"><pre><span></span>命令 : apkpatch.bat -f new.apk -t old.apk -o output1 -k debug.keystore -p android -a androiddebugkey -e android
+
+-f &lt;new.apk&gt; ：新版本
+-t &lt;old.apk&gt; : 旧版本
+-o &lt;output&gt; ： 输出目录
+-k &lt;keystore&gt;： 打包所用的keystore
+-p &lt;password&gt;： keystore的密码
+-a &lt;alias&gt;： keystore 用户别名
+-e &lt;alias password&gt;： keystore 用户别名密码
+</pre></div>
                 </div><!-- /.entry-content -->
                 <div class="comments">
                 <h2>Comments !</h2>
                         <div id="disqus_thread"></div>
                         <script type="text/javascript">
-                           var disqus_identifier = "my-super-post.html";
+                           var disqus_identifier = "project_experience.html";
                            (function() {
                                 var dsq = document.createElement('script');
                                 dsq.type = 'text/javascript'; dsq.async = true;
