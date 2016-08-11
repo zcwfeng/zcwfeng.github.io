@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>zcwfeng - React</title>
+    <title>React 开源组件积累</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="zcwfeng">
@@ -84,9 +84,20 @@
     <div class="container-fluid">
       <div class="row">
         <div class="span9" id="content">
-        <div class="article">
-                <h1><a href="/react_component.html">React 开源组件积累</a></h1>
-                <div class="well small"><footer class="post-info">
+<section id="content">
+        <article>
+                <header>
+                        <h1>
+                                <a href=""
+                                        rel="bookmark"
+                                        title="Permalink to React 开源组件积累">
+                                        React 开源组件积累
+                                </a>
+                        </h1>
+                </header>
+                <div class="entry-content">
+                <div class="well">
+<footer class="post-info">
 <span class="label">Date</span>
 <abbr class="published" title="2016-08-18T14:02:00+02:00">
         <i class="icon-calendar"></i>四 18 八月 2016
@@ -100,35 +111,38 @@
 <span class="label">Tags</span>
 	<a href="/tag/pelican.html"><i class="icon-tag"></i>pelican</a>
 	<a href="/tag/publishing.html"><i class="icon-tag"></i>publishing</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><p>React 开源组件</p>
-                        <a class="btn primary xsmall" href="/react_component.html">more ...</a>
+</footer><!-- /.post-info -->                </div>
+                <h1>React 开源组件笔记</h1>
+<blockquote>
+<p>开源组件react-native-camera</p>
+</blockquote>
+<p><a href="https://www.npmjs.com/package/rn-camera-roll">推荐一个跨平台的rn-camera-roll</a>: ----&gt;https://www.npmjs.com/package/rn-camera-roll</p>
+<div class="highlight"><pre><span></span>A Camera component for React Native. Also supports barcode scanning!二维码扫描
+原生Android Zxing google
+rnpm link不是安装，而是添加原生依赖，对应的组件已经安装好了才能rnpm link
+通过这个例子来理解下react native的架构：js环境 jsBridge native环境
+业务逻辑是reactJs处理  ui用react写 但实际桥接成native
+ref的两种属性：String属性 回调属性（组件render渲染完成后的回调）
+官网：https://facebook.github.io/react ... -callback-attribute
+this callback will be executed immediately after the component is mounted（组件render之后DidMount之前）
+</pre></div>
+                </div><!-- /.entry-content -->
+                <div class="comments">
+                <h2>Comments !</h2>
+                        <div id="disqus_thread"></div>
+                        <script type="text/javascript">
+                           var disqus_identifier = "react_component.html";
+                           (function() {
+                                var dsq = document.createElement('script');
+                                dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = 'https://https-zcwfeng-github-io.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] ||
+                                 document.getElementsByTagName('body')[0]).appendChild(dsq);
+                          })();
+                        </script>
                 </div>
-        </div>
-        <hr />
-        <div class="article">
-                <h1><a href="/my-super-post.html">React 编译命令</a></h1>
-                <div class="well small"><footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2016-08-11T14:02:00+02:00">
-        <i class="icon-calendar"></i>四 11 八月 2016
-</abbr>
-<span class="label">By</span>
-<a href="/author/zcwfeng.html"><i class="icon-user"></i>zcwfeng</a>
-<span class="label">Category</span>
-<a href="/category/react.html"><i class="icon-folder-open"></i>React</a>.
-
-
-<span class="label">Tags</span>
-	<a href="/tag/pelican.html"><i class="icon-tag"></i>pelican</a>
-	<a href="/tag/publishing.html"><i class="icon-tag"></i>publishing</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><p>Short version for index and feeds</p>
-                        <a class="btn primary xsmall" href="/my-super-post.html">more ...</a>
-                </div>
-        </div>
-        <hr />
-
+        </article>
+</section>
         </div><!--/span-->
 
                 <div class="span3 well sidebar-nav" id="sidebar">
